@@ -8,4 +8,17 @@ def test_store_single_response():
     assert 'English' in language_survey.responses
 
 
+def test_store_three_responses():
+    """Test that three individual responses are stored properly"""
+    question = 'What language did you first learn to speak?'
+    language_survey = AnonymousSurvey(question)
+    responses = ['English', 'Kiswahili', 'Sheng']
+
+    for response in responses:
+        language_survey.store_response(response)
+
+    for response in responses:
+        assert response in language_survey.responses
+
+
 # Note: As the tests run, the progress bar increments (66%, 100%)
