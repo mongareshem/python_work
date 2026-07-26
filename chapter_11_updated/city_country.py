@@ -1,4 +1,4 @@
-def format_city_country_name(city, country):
+def format_city_country_name(city, country, population=''):
     """A function that returns a neatly formatted city and country name"""
     return f'{city.title()}, {country.title()}'
 
