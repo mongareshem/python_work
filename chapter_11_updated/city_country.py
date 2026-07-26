@@ -5,4 +5,4 @@ def format_city_country_name(city, country, population=0):
     else:
         return f'{city.title()}, {country.title()}'
 
-print(format_city_country_name('nairobi', 'kenya', ))
+print(format_city_country_name('nairobi', 'kenya', 7_000_000))
