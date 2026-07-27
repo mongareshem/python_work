@@ -9,4 +9,11 @@ while True:
     if second_number == 'q':
         break
 
-    print(int(first_number)/int(second_number))
+    try:
+        answer = int(first_number)/int(second_number)
+    except ZeroDivisionError:
+        print('You cannot divide by zero!')
+    except ValueError:
+        print('You cannot perform division using letters!')
+    else:
+        print(answer)
