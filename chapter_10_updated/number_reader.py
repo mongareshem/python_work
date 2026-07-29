@@ -6,3 +6,5 @@ contents = path.read_text()
 numbers = json.loads(contents)
 
 print(numbers)
+print(type(contents))
+print(type(numbers))
