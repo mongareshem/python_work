@@ -1,10 +1,14 @@
 from pathlib import Path
 import json
 
-name = input('What is your name? ')
-
 path = Path('username.json')
-contents = json.dumps(name)
-path.write_text(contents)
+if path.exists():
+    contents = path.read_text()
+    username = json.loads(contents)
+    print(f"Welcome back {username.title()}!")
 
-print(f"We'll try to remember you when you come back, {name.title()}!")
+else:
+    username = input('What is your name? ')
+    contents = json.dumps(username)
+    path.write_text(contents)
+    print(f"We'll try to remember you when you come back, {username.title()}!")
